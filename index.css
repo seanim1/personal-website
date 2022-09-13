@@ -1,0 +1,30 @@
+#Title {
+    font-family: Arial;
+    font-size: 1.5em;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+    border: 3px solid black;
+}
+
+#social_link {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.9em;
+}
+
+#IK {
+    font-family: Arial;
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+    margin-top: 2em;
+    border: 2px solid black;
+}
+
+li.link {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    padding: 10px;
+    padding-left: 20px
+}
