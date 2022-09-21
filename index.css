@@ -1,30 +1,33 @@
 #Title {
     font-family: Arial;
-    font-size: 1.5em;
+    font-size: 1em;
     margin: auto;
-    padding: 10px;
+    padding: 0px;
     text-align: center;
     width: 30%;
     border: 3px solid black;
 }
 
-#social_link {
-    font-family: 'Times New Roman', Times, serif;
+nav {
+    margin: auto;
+    text-align: center;
+    font-family: 'Arial', cursive;
     font-size: 0.9em;
 }
 
-#IK {
+table {
+    margin: auto;
+}
+td, th {
+    border: 2px solid grey;
+    padding: 20px
+}
+
+article {
     font-family: Arial;
-    padding: 20px;
+    padding: 10px;
     width: 70%;
     margin: auto;
     margin-top: 2em;
     border: 2px solid black;
-}
-
-li.link {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.1em;
-    padding: 10px;
-    padding-left: 20px
 }
