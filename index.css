@@ -1,33 +1,74 @@
-#Title {
-    font-family: Arial;
-    font-size: 1em;
+body {
+    font-family: Roboto;
+    color:whitesmoke;
+    background-color: rgb(52, 52, 52);
+    background-image: url(./images/AtHome-NightSky-1080x810-1.jpeg);
+}
+
+header {
     margin: auto;
-    padding: 0px;
     text-align: center;
     width: 30%;
-    border: 3px solid black;
+    border: 2px solid lightblue;
 }
 
 nav {
     margin: auto;
     text-align: center;
-    font-family: 'Arial', cursive;
-    font-size: 0.9em;
+    font-size: 1.5em;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+
+h2::first-letter {
+    font-size: 1.4em;
 }
 
 table {
-    margin: auto;
+    text-align: center;
 }
 td, th {
     border: 2px solid grey;
-    padding: 20px
+    padding: 5px
 }
 
 article {
-    font-family: Arial;
     padding: 10px;
     width: 70%;
     margin: auto;
-    margin-top: 2em;
-    border: 2px solid black;
+    border: 2px solid lightblue;
+}
+
+.Icon {
+    border: 0.2em;
+    border-style: solid;
+    border-color: lightcyan;
+    border-radius: 20%;
+    width: 110px;
+}
+
+.Icon:hover {
+    width: 115px;
+    border-color: aqua;
+}
+
+a:link {
+    color: lightblue;
+}
+
+a:visited {
+    color: lightgreen;
+}
+a:hover {
+    color: violet;
+}
+
+a:active {
+    color: white;
 }
