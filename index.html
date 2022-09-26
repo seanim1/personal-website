@@ -13,90 +13,144 @@
 </head>
 
 <body>
-    <header id="Title">
-        <h1>Sean Im</h1>
-    </header>
+    <div id="website">
+        <header id="Title">
+            <h1>Sean Im</h1>
+        </header>
+    
+        <nav class="social_link">
+            <p>
+                <sub><a href="https://github.com/seanim1">Github</a></sub>
+                <sup><a href="https://www.linkedin.com/in/sean-im-2ba923177/">LinkedIn</a></sup>
+            </p>
+        </nav>
+    
+        <main>
+            <article id="IK">
+                <h2>Inverse Kinematics ( Three.js )</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Interactive Website</th>
+                            <th>Graph</th>
+                            <th>Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="https://seanim1.github.io/Inverse-Kinematics_2-Links_2D/">
+                                    <img class="Icon" src="./images/IK_2D_2-Link.png"  alt="IK_2D_2-Link's image">
+                                </a>
+                                <br>
+                                <a href="https://seanim1.github.io/Inverse-Kinematics_2-Links_2D/">IK: 2-Arms 2D</a>
+                            </td>
+                            <td><a href="https://www.desmos.com/calculator/nl3k5e72jg">Desmos</a></td>
+                            <td><a href="./pdf_files/Inverse_kinematics_2-Link_Planar.pdf">Note.pdf</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article> 
+    
+            <article id="Shader">
+                <h2>Shader</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Interactive Website</th>
+                            <th>Graph</th>
+                            <th>Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="https://seanim1.github.io/Shader_Debugger/">
+                                    <img class="Icon" src="./images/Shader_Printer.png" alt="Shader_Debug's image">
+                                </a>
+                                <br>
+                                <a href="https://seanim1.github.io/Shader_Debugger/">Shader Debugger /<br>Pixel value printer</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article> 
+            
+            <section id="Stuffs">
+                <h2>- Side Projects -</h2>
+                <article>
+                    <h4>Chaos Game ( C++ / OpenGL )</h4>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/sl5UV7Catys" ></iframe>
+                </article>
+            </section>
+    
+            <section id="Memes">
+                <h2>- Favorite Memes -</h2>
+                <details>
+                    <summary>(Click to expand)</summary>
+                    <a href="https://youtu.be/1XSysnj2Bk0">Walter White in Mario Kart Wii</a>
+                </details>
+            </section>
+        </main>
+        <br><br>
+        <footer>
+            &copy;&nbsp;Copyright Sean Im | <em>All Rights Reserved</em>
+            <p>Developed by: Sean Im</p>
+        </footer>
+    </div>
+    
 
-    <nav class="social_link">
-        <p>
-            <sub><a href="https://github.com/seanim1">Github</a></sub>
-            <sup><a href="https://www.linkedin.com/in/sean-im-2ba923177/">LinkedIn</a></sup>
-        </p>
-    </nav>
+    <div id="threeJS">
+        <script type="shader" id="vertexShader">
+            varying vec2 vUv;
+            // uniform vec2 uAspectRatio;
+    
+    
+            void main() {
+                // vUv = (uv - vec2(0.5)) * uAspectRatio + vec2(0.5);
+                vUv = uv;
+    
+                gl_Position = projectionMatrix * modelViewMatrix * vec4(position.xyz, 1.0);
+            }
+        </script>
+        <script type="shader" id="fragmentShader">
+            // Find this shader at ( https://www.shadertoy.com/view/slGBzD )
+            varying vec2 vUv;
+            // uniform sampler2D uTexture;
+            uniform float time;
+            uniform vec2 mousePos;
+    
+            void main() {
+                vec2 uv = vUv;
+                // vec4 texture = texture2D(uTexture, vUv);
+                vec3 col = 0.5 + 0.5*cos(time+uv.xyx+vec3(0,2,4));
 
-    <main>
-        <article id="IK">
-            <h2>Inverse Kinematics ( Three.js )</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Interactive Website</th>
-                        <th>Graph</th>
-                        <th>Note</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <a href="https://seanim1.github.io/Inverse-Kinematics_2-Links_2D/">
-                                <img class="Icon" src="./images/IK_2D_2-Link.png"  alt="IK_2D_2-Link's image">
-                            </a>
-                            <br>
-                            <a href="https://seanim1.github.io/Inverse-Kinematics_2-Links_2D/">IK: 2-Arms 2D</a>
-                        </td>
-                        <td><a href="https://www.desmos.com/calculator/nl3k5e72jg">Desmos</a></td>
-                        <td><a href="./pdf_files/Inverse_kinematics_2-Link_Planar.pdf">Note.pdf</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </article> 
-
-        <article id="Shader">
-            <h2>Shader</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Interactive Website</th>
-                        <th>Graph</th>
-                        <th>Note</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <a href="https://seanim1.github.io/Shader_Debugger/">
-                                <img class="Icon" src="./images/Shader_Printer.png" alt="Shader_Debug's image">
-                            </a>
-                            <br>
-                            <a href="https://seanim1.github.io/Shader_Debugger/">Shader Debugger /<br>Pixel value printer</a>
-                        </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </article> 
-        
-        <section id="Stuffs">
-            <h2>- Side Projects -</h2>
-            <article>
-                <h4>Chaos Game ( C++ / OpenGL )</h4>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/sl5UV7Catys" ></iframe>
-            </article>
-        </section>
-
-        <section id="Memes">
-            <h2>- Favorite Memes -</h2>
-            <details>
-                <summary>(Click to expand)</summary>
-                <a href="https://youtu.be/1XSysnj2Bk0">Walter White in Mario Kart Wii</a>
-            </details>
-        </section>
-    </main>
-    <br><br>
-    <footer>
-        &copy;&nbsp;Copyright Sean Im | <em>All Rights Reserved</em>
-        <p>Developed by: Sean Im</p>
-    </footer>
+                uv -= vec2(0.5);
+    
+                vec2 m = mousePos;
+                
+                float d = length( uv - (m) );
+                
+                float r = 0.01 * cos(2. * time ) * cos(uv.x* time/20.) * cos(uv.y* time/20.);
+                
+                r += 0.015 * cos(1. * time ) + 0.15;
+                
+                float c = smoothstep( r, r-0.2, d ) + 0.2;
+                
+                if ( c < 0.5 ) {
+                
+                    c = c / ( 0.15*cos(2.*time) + 1. );
+                
+                }
+                
+                col = col * c;
+    
+                gl_FragColor = vec4(col, 1.0);
+            }
+        </script>
+        <script src="source/shaderQuad.js" type="module"></script>
+    </div>
 </body>
 </html>
