@@ -2,17 +2,22 @@ body {
     font-family: Roboto;
     color:whitesmoke;
     background-color: rgb(52, 52, 52);
-}
-
-#website {
-    margin-top: 2em;
-    position: absolute;
-}
-
-#threeJs {
     /* This fixes mobile touchscreen drag problem */    
     touch-action: none;
 }
+
+#website {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+#threeJS {
+    width: auto;
+}
+
 header {
     margin: auto;
     text-align: center;

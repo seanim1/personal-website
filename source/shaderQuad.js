@@ -7,17 +7,17 @@ const clock = new THREE.Clock();
 // Getting started
 const scene = new THREE.Scene();
 //const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-const frustumSize = 5;
-let aspect = window.innerWidth / window.innerHeight;
+const frustumSize = 9;
+let aspect = document.documentElement.scrollWidth / document.documentElement.scrollHeight;
 let camera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, 0.1, 1000 );
 const renderer = new THREE.WebGLRenderer();
 renderer.setPixelRatio( window.devicePixelRatio );
-renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setSize( document.documentElement.scrollWidth, document.documentElement.scrollHeight );
 document.body.appendChild( renderer.domElement );
 
 window.addEventListener( 'resize', onWindowResize );
 function onWindowResize() {
-    aspect = window.innerWidth / window.innerHeight;
+    aspect = document.documentElement.scrollWidth / document.documentElement.scrollHeight;
 
     camera.left = - frustumSize * aspect / 2;
     camera.right = frustumSize * aspect / 2;
@@ -25,7 +25,8 @@ function onWindowResize() {
     camera.bottom = - frustumSize / 2;
 
     camera.updateProjectionMatrix();
-    renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setSize( document.documentElement.scrollWidth, document.documentElement.scrollHeight );
+    uniformData.mousePos.value = new THREE.Vector2( document.documentElement.scrollWidth, document.documentElement.scrollHeight );
 }
 
 // mouse action
@@ -44,13 +45,14 @@ function onMouseMove(e) {
     // plane wall = scene.children[0]
     const hit = raycaster.intersectObject( scene.children[0], false );
     let rayhit = hit[0].point
-    uniformData.mousePos.value = new THREE.Vector2( rayhit.x, rayhit.y ).divideScalar(9);
+    uniformData.mousePos.value = new THREE.Vector2( rayhit.x / 9, rayhit.y / 10 );
     //scene.children[1].position.set( rayhit.x, rayhit.y );
 }
 
 const uniformData = {
     time: { type: 'f', value: 0.0 },
     mousePos: { value: new THREE.Vector2( 0.0, 0.0 ) },
+    resolution: { value: new THREE.Vector2( document.documentElement.scrollWidth, document.documentElement.scrollHeight ) }
 }
 // initiate
 function init() {
