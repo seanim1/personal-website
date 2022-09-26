@@ -9,6 +9,10 @@ body {
     position: absolute;
 }
 
+#threeJs {
+    /* This fixes mobile touchscreen drag problem */    
+    touch-action: none;
+}
 header {
     margin: auto;
     text-align: center;
