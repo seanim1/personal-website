@@ -18,21 +18,20 @@ body {
 
 header {
     margin: auto;
+    margin-bottom: 1rem;
     text-align: center;
     width: 30%;
-    border: 2px solid lightblue;
+    border: 4px solid whitesmoke;
     background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
 }
 
-nav {
-    border: 2px solid lightblue;
-    margin: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;;
-    width: 30%;
-    text-align: center;
-    font-size: 1.5em;
-    background-color: rgba(0, 0, 0, 0.7);
+.social_icon {
+    margin: 2px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid whitesmoke;
+    background-color: whitesmoke;
 }
 
 a {
@@ -47,47 +46,44 @@ h2::first-letter {
     font-size: 1.4em;
 }
 
-table {
-    text-align: center;
-}
-td, th {
-    border: 2px solid grey;
-    padding: 5px
-}
-
 article {
-    padding: 10px;
+    padding-left: 1.5em;
+    padding-bottom: 1em;
     width: 70%;
     margin: auto;
     margin-bottom: 1rem;
-    border: 2px solid lightblue;
+    border: 3px solid whitesmoke;
     background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
 }
 
 .Icon {
-    border: 0.2em;
-    border-style: solid;
-    border-color: lightcyan;
-    border-radius: 20%;
+    border: 3px solid whitesmoke;
+    border-radius: 20px;
     width: 110px;
 }
 
 .Icon:hover {
     width: 115px;
-    border-color: aqua;
+    border-color: lightblue;
+    border-width: 6px;
 }
 
-a:link {
-    color: lightblue;
+.app_text {
+    color: white;
+    
+}
+/*a:link {
+    color: whitesmoke;
 }
 
 a:visited {
-    color: lightgreen;
+    color: whitesmoke;
 }
 a:hover {
-    color: violet;
+    color: whitesmoke;
 }
 
 a:active {
-    color: white;
-}
+    color: lightgoldenrodyellow;
+}*/
