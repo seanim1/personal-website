@@ -1,4 +1,4 @@
-import * as THREE from '../libs/three.module.js';
+import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.145.0/three.module.js';
 
 // Global variables
 const raycaster = new THREE.Raycaster();
