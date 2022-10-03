@@ -26,7 +26,6 @@ function onWindowResize() {
 
     camera.updateProjectionMatrix();
     renderer.setSize( document.documentElement.scrollWidth, document.documentElement.scrollHeight );
-    //console.log(uniformData.resolution)
 }
 
 // mouse action
@@ -47,7 +46,7 @@ function onMouseMove(e) {
     const hit = raycaster.intersectObject( scene.children[0], false );
     let rayhit = hit[0].point
     uniformData.mousePos.value = new THREE.Vector2( rayhit.x, rayhit.y ).divideScalar(2);
-    console.log(rayhit)
+    //console.log(rayhit)
     //scene.children[1].position.set( rayhit.x, rayhit.y );
 }
 
