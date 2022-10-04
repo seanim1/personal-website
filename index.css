@@ -58,7 +58,12 @@ article {
     border-radius: 30px;
 }
 
+.application {
+    display: inline-block;
+}
+
 .Icon {
+    margin-right: 1em;
     border: 3px solid whitesmoke;
     border-radius: 20px;
     width: 110px;
