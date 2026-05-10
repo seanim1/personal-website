@@ -1,6 +1,6 @@
 body {
     font-family: Roboto;
-    color:whitesmoke;
+    color: whitesmoke;
     background-color: rgb(52, 52, 52);
 }
 
@@ -32,12 +32,18 @@ header {
     border-radius: 10px;
     border: 2px solid whitesmoke;
     background-color: whitesmoke;
-    
+    transition: all 0.2s ease;
+}
+
+.social_icon:hover {
+    transform: scale(1.1);
 }
 
 a {
     text-decoration: none;
+    transition: all 0.2s ease;
 }
+
 a:hover {
     font-size: 1.1em;
     text-decoration: underline;
@@ -47,10 +53,16 @@ h2::first-letter {
     font-size: 1.4em;
 }
 
-article {
+h3 {
+    margin: 0.8em 0 0.8em 0;
+    font-size: 1.6em;
+    color: lightblue;
+}
+
+article.grouping {
     padding-left: 1.5em;
     padding-bottom: 1em;
-    width: 70%;
+    width: 90%;
     margin: auto;
     margin-bottom: 1rem;
     border: 3px solid whitesmoke;
@@ -58,38 +70,49 @@ article {
     border-radius: 30px;
 }
 
-.application {
-    display: inline-block;
+/* Horizontal project item layout */
+.project-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2em;
+    margin-bottom: 0.0em;
+}
+
+.project-item a {
+    flex-shrink: 0;
+}
+
+.app_text.secondary {
+    display: inline;
+    margin-right: 1em;
+    color: lightblue;
+    font-size: 0.6em;
+    transition: all 0.2s ease;
 }
 
 .Icon {
-    margin-right: 1em;
     border: 3px solid whitesmoke;
     border-radius: 20px;
-    width: 110px;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    transition: all 0.2s ease;
 }
 
 .Icon:hover {
-    width: 115px;
+    width: 121px;
+    height: 121px;
     border-color: lightblue;
     border-width: 6px;
 }
 
 .app_text {
     color: white;
-    
-}
-/*a:link {
-    color: whitesmoke;
+    font-size: 1em;
+    transition: all 0.2s ease;
 }
 
-a:visited {
-    color: whitesmoke;
+.app_text:hover {
+    color: lightblue;
+    text-decoration: underline;
 }
-a:hover {
-    color: whitesmoke;
-}
-
-a:active {
-    color: lightgoldenrodyellow;
-}*/
